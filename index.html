@@ -558,6 +558,49 @@
     #toast.show { transform: translateX(-50%) translateY(0); }
 
     /* ── Responsive ── */
+    .ig-link {
+      color: var(--pink-dark);
+      display: flex;
+      align-items: center;
+      transition: color 0.2s, transform 0.2s;
+    }
+    .ig-link:hover { color: var(--blue-dark); transform: scale(1.15); }
+
+    .ig-icon {
+      width: 26px;
+      height: 26px;
+    }
+
+    .ig-follow-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.4rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(220,39,67,0.3);
+    }
+    .ig-follow-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(220,39,67,0.4); }
+
+    .footer-ig {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: 0.7rem;
+      color: rgba(255,255,255,0.85);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .footer-ig:hover { opacity: 1; color: #fff; }
+
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .about-grid, .contact-grid { grid-template-columns: 1fr; }
@@ -576,14 +619,23 @@
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Order</a></li>
     </ul>
-    <a class="btn btn-primary" href="#contact" style="padding:0.6rem 1.4rem;font-size:0.9rem;">Order Now 🧁</a>
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <a href="https://www.instagram.com/doughremi.yash" target="_blank" rel="noopener" class="ig-link" aria-label="Instagram">
+        <svg class="ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <a class="btn btn-primary" href="#contact" style="padding:0.6rem 1.4rem;font-size:0.9rem;">Order Now 🧁</a>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-badge">✨ Homemade from Scratch ✨</div>
     <h1 class="hero-title">Dough Re Mi</h1>
-    <p class="hero-sub">A baked goods company crafting delicious treats for every occasion — from birthdays to Friendsgivings!</p>
+    <p class="hero-sub">A baked goods company crafting delicious treats!</p>
     <div class="hero-emojis">🍪 🧁 🍫</div>
     <div>
       <a class="btn btn-primary" href="#menu">See Our Menu</a>
@@ -669,19 +721,19 @@
           </div>
           <div class="menu-item">
             <div class="item-name">Chocolate Brownie</div>
-            <div class="item-price">$3 · Tray $32</div>
+            <div class="item-price">Tray $32</div>
           </div>
           <div class="menu-item">
             <div class="item-name">White Chocolate Blondie with Walnuts</div>
-            <div class="item-price">$3 · Tray $32</div>
+            <div class="item-price">Tray $32</div>
           </div>
           <div class="menu-item">
             <div class="item-name">Traditional Rice Krispie Square</div>
-            <div class="item-price">$2 · Tray $22</div>
+            <div class="item-price">Tray $22</div>
           </div>
           <div class="menu-item">
             <div class="item-name">Fruity Pebbles Rice Krispie Square</div>
-            <div class="item-price">$2 · Tray $22</div>
+            <div class="item-price">Tray $22</div>
           </div>
         </div>
 
@@ -753,6 +805,14 @@
             <span class="chip">☕ Tea Parties</span>
             <span class="chip">🎊 Family Gatherings</span>
           </div>
+          <a href="https://www.instagram.com/doughremi.yash" target="_blank" rel="noopener" class="ig-follow-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+            Follow us on Instagram
+          </a>
           <br/>
           <p style="font-size:0.9rem;color:#7C4A30;">
             <strong>Please order at least 48 hours in advance</strong> to make sure your goodies are ready in time. Bulk and dozen orders are welcome!
@@ -810,7 +870,15 @@
   <footer>
     <div class="footer-logo">Dough Re Mi</div>
     <p>A baked goods company · Homemade from scratch with love 🍪</p>
-    <p style="margin-top:0.4rem;font-size:0.8rem;opacity:0.65;">© 2025 Dough Re Mi · All rights reserved</p>
+    <a href="https://www.instagram.com/doughremi.yash" target="_blank" rel="noopener" class="footer-ig">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+      @doughremi.yash
+    </a>
+    <p style="margin-top:0.8rem;font-size:0.8rem;opacity:0.65;">© 2025 Dough Re Mi · All rights reserved</p>
   </footer>
 
   <!-- TOAST -->
